@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")/.." || exit
 
-sudo rm -rf api/dist
+sudo rm -rf crawler/dist

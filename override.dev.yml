@@ -1,8 +1,8 @@
 version: "3.5"
 
 services:
-  api:
-    container_name: api
+  crawler:
+    container_name: crawler
     stdin_open: true
     build:
       dockerfile: ./docker/dev/Dockerfile

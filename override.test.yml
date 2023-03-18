@@ -1,7 +1,7 @@
 version: "3.5"
 
 services:
-  api:
+  crawler:
     container_name: api
     stdin_open: true
     build:

@@ -8,11 +8,11 @@ x-env: &env
 
 version: "3.5"
 services:
-  api:
+  crawler:
     image: ${DOCKER_REGISTRY:-}api${DEPLOY_TAG:-}
     restart: always
     build:
-      context: ./api
+      context: ./crawler
     ports:
       - "3001:3001"
     env_file:
