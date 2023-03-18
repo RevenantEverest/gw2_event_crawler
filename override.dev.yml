@@ -11,7 +11,7 @@ services:
       - testing_db
       - pgadmin
     volumes:
-      - ./api:/app
+      - ./crawler:/app
       - /app/node_modules
   db:
     container_name: db

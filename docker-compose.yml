@@ -4,12 +4,12 @@ x-env: &env
     - DB_USERNAME=${DB_USERNAME}
     - DB_PASSWORD=${DB_PASSWORD}
     - DB_HOST=${DB_HOST}
-    - PORT=${API_PORT}
+    - PORT=${CRAWLER_PORT}
 
 version: "3.5"
 services:
   crawler:
-    image: ${DOCKER_REGISTRY:-}api${DEPLOY_TAG:-}
+    image: ${DOCKER_REGISTRY:-}crawler${DEPLOY_TAG:-}
     restart: always
     build:
       context: ./crawler

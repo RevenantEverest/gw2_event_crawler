@@ -10,11 +10,11 @@ import { logs, colors } from './utils/index.js';
 (async function main() {
     await waitForPostgres(AppDataSource);
 
-    const PORT = ENV.API_PORT || 3001;
+    const PORT = ENV.CRAWLER_PORT || 3001;
 
     const app = initializeApp();
 
     app.listen(PORT, () => {
-        return logs.log({ color: colors.success, type: "HTTP", message: `API: Listening on port ${PORT}` });
+        return logs.log({ color: colors.success, type: "HTTP", message: `CRAWLER: Listening on port ${PORT}` });
     });
 })();

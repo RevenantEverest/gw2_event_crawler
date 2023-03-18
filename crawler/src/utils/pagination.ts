@@ -4,7 +4,7 @@ import { ENV } from '../constants/index.js';
 
 export function paginateResponse<T>(req: Request, res: Response, results: [T[], number]): PaginatedResponse<T> {
 
-    const baseUrl = ENV.IS_DEV ? `${ENV.BASE_URL}:${ENV.API_PORT}` : ENV.BASE_URL;
+    const baseUrl = ENV.IS_DEV ? `${ENV.BASE_URL}:${ENV.CRAWLER_PORT}` : ENV.BASE_URL;
 
     const { page, limit } = res.locals;
     const regEx: RegExp = /(?=\?)(.*)/gi;

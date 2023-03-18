@@ -7,4 +7,4 @@ export const IS_TEST = process.env.NODE_ENV === "test";
 
 export const BASE_URL = process.env.BASE_URL as string;
 
-export const API_PORT = process.env.API_PORT as string;
+export const CRAWLER_PORT = process.env.CRAWLER_PORT as string;
