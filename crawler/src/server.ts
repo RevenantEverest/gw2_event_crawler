@@ -39,7 +39,7 @@ async function handleCrawl() {
     logs.log({ color: colors.success, message: `Initial Crawl - ${dayjs().format("M/D/YY HH:mm:ss")}` });
     handleCrawl();
 
-    cron.schedule('0 0 */1 * *', () => {
+    cron.schedule('0 */1 * * *', () => {
         logs.log({ color: colors.success, message: `Starting Crawl - ${dayjs().format("M/D/YY HH:mm:ss")}` });
 
         handleCrawl();
