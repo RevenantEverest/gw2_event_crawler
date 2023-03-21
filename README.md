@@ -1,6 +1,6 @@
 # Guild Wars 2 - Event Crawler
 
-A web crawler that parses event information from the (Event Wiki)[https://wiki.guildwars2.com/wiki/Event_timers]
+A web crawler that parses event information from the [Event Wiki](https://wiki.guildwars2.com/wiki/Event_timers)
 
 ---
 
