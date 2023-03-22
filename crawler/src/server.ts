@@ -30,6 +30,9 @@ async function handleCrawl() {
     
     const eventData = guildWarsEventControllers.parseEventBars(html);
 
+    await page.close();
+    await browser.close();
+
     return guildWarsEventControllers.createRows(eventData);
 };
 
