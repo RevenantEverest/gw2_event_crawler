@@ -8,3 +8,6 @@
 # Files Extensions
 *.env
 *.log
+
+# Files
+guildwarsEvents.json
