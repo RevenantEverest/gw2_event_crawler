@@ -33,6 +33,8 @@ DB_PORT=5432
 
 Run the `start_dev.sh` script in the `/scripts/` directory
 
+A complete crawl consists of 24 hours of crawling to get all different times an event can occur. Exports data to `crawler/output/guildwarsEvents.json`
+
 ### Technologies Used
 
 - TypeScript
