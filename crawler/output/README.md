@@ -1,0 +1,1 @@
+This directory exists for the output of `guildwarsEvents.json` once the crawl is complete
