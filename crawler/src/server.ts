@@ -39,12 +39,27 @@ async function handleCrawl() {
 (async function main() {
     await waitForPostgres(AppDataSource);
 
+    let hourCount = 0;
+
     logs.log({ color: colors.success, message: `Initial Crawl - ${dayjs().format("M/D/YY HH:mm:ss")}` });
     handleCrawl();
 
-    cron.schedule('0 */1 * * *', () => {
-        logs.log({ color: colors.success, message: `Starting Crawl - ${dayjs().format("M/D/YY HH:mm:ss")}` });
+    const task = cron.schedule('0 */1 * * *', () => {
+        hourCount += 1;
+        logs.log({ color: colors.success, message: `Starting Crawl ${hourCount}/24 - ${dayjs().format("M/D/YY HH:mm:ss")}` });
 
         handleCrawl();
+
+        if(hourCount >= 24) {
+            task.emit("complete");
+        }
+    });
+
+    task.start();
+
+    task.on("complete", () => {
+        task.stop();
+
+        guildWarsEventControllers.createJsonFile();
     });
 })();
